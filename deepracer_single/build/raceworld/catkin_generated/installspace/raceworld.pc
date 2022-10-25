@@ -1,0 +1,8 @@
+prefix=/home/bughht/deepracer/Electro_RaceCar/deepracer_single/install
+
+Name: raceworld
+Description: Description of raceworld
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

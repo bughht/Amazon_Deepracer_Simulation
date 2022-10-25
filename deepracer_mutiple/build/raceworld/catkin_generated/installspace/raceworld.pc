@@ -1,0 +1,8 @@
+prefix=/home/bughht/deepracer/deepracer_mutiple/install
+
+Name: raceworld
+Description: Description of raceworld
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

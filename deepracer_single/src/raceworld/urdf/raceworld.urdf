@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="raceworld">
+  
+  
+  <gazebo reference="base_link">
+   <material>Gazebo/Residential</material>
+   <turnGravityOff>false</turnGravityOff>
+   <mu1 value="5000"/>
+   <mu2 value="5000"/>
+   <kp  value="1000000.0" />
+   <kd  value="100000.0" />
+   <fdir1 value="1 0 0"/>
+  </gazebo> 
+  
+  <gazebo reference="grass_Link">
+    <material>Gazebo/Grass</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>   
+  
+  <gazebo reference="midline_Link">
+    <material>Gazebo/Yellow</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo> 
+  <gazebo reference="roadguard_Link">
+    <material>Gazebo/Grey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="signsupport_Link">
+    <material>Gazebo/Grey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="stopsignbg_Link">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="startsignbg_Link">
+    <material>Gazebo/Green</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="word_Link">
+    <material>Gazebo/White</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="signbg_Link">
+    <material>Gazebo/White</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  
+  <gazebo reference="bridge1_Link">
+    <material>Gazebo/White</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="bridge2_Link">
+    <material>Gazebo/Grey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo> 
+  
+  <gazebo reference="bridge3roof_Link">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="bridge3bottom_Link">
+    <material>Gazebo/Red</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="bridge3support_Link">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo> 
+   <gazebo reference="bridge3ws_Link">
+    <material>Gazebo/Yellow</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <gazebo reference="bridge3word_Link">
+    <material>Gazebo/Yellow</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo> 
+  
+  <gazebo reference="bridge3lion_Link">
+    <material>Gazebo/Grey</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+  <gazebo reference="bridge3wbg_Link">
+    <material>Gazebo/Blue</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>  
+   
+  
+  
+  
+  
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.23109 0.55837 0.0005"
+        rpy="0 0 0" />
+      <mass
+        value="10.777" />
+      <inertia
+        ixx="21.315"
+        ixy="10.04"
+        ixz="-6.1572E-16"
+        iyy="50.695"
+        iyz="1.3047E-15"
+        izz="72.011" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0001"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="grass_Link">
+    <inertial>
+      <origin
+        xyz="0.02018 0.8675 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="411.05" />
+      <inertia
+        ixx="922.47"
+        ixy="-4.5837E-13"
+        ixz="1.7797E-18"
+        iyy="2149.2"
+        iyz="5.6483E-14"
+        izz="3071.7" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.0001"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/grass_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.28627 0.66275 0.32941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/grass_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="grass_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="grass_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="roadguard_Link">
+    <inertial>
+      <origin
+        xyz="-0.23109 0.55837 0.001"
+        rpy="0 0 0" />
+      <mass
+        value="5.3884" />
+      <inertia
+        ixx="11.29"
+        ixy="5.063"
+        ixz="-3.1245E-16"
+        iyy="26.12"
+        iyz="6.8958E-16"
+        izz="37.411" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/roadguard_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64314 0.61569 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/roadguard_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roadguard_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="roadguard_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="midline_Link">
+    <inertial>
+      <origin
+        xyz="-0.23126 0.55822 0.00075"
+        rpy="0 0 0" />
+      <mass
+        value="0.078" />
+      <inertia
+        ixx="6.6462E-07"
+        ixy="5.151E-19"
+        ixz="-1.5488E-22"
+        iyy="6.6463E-07"
+        iyz="1.1524E-22"
+        izz="1.3E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.003 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/midline_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/midline_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="midline_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="midline_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="signsupport_Link">
+    <inertial>
+      <origin
+        xyz="0.62162 -0.60521 0.06105"
+        rpy="0 0 0" />
+      <mass
+        value="0.068432" />
+      <inertia
+        ixx="0.00017248"
+        ixy="-4.0843E-14"
+        ixz="-8.9055E-08"
+        iyy="0.00017247"
+        iyz="1.4217E-12"
+        izz="6.394E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.85 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/signsupport_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.49804 0.49804 0.49804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/signsupport_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="signsupport_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="signsupport_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="signbg_Link">
+    <inertial>
+      <origin
+        xyz="0.6106 -0.60521 0.144"
+        rpy="0 0 0" />
+      <mass
+        value="0.0028274" />
+      <inertia
+        ixx="5.7432E-06"
+        ixy="6.6813E-22"
+        ixz="-8.2918E-22"
+        iyy="2.8718E-06"
+        iyz="3.6705E-22"
+        izz="2.8718E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.85 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/signbg_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/signbg_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="signbg_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="signbg_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="word_Link">
+    <inertial>
+      <origin
+        xyz="0.57181 -0.60491 0.14539"
+        rpy="0 0 0" />
+      <mass
+        value="0.0013963" />
+      <inertia
+        ixx="5.5232E-08"
+        ixy="-3.5064E-13"
+        ixz="4.1093E-14"
+        iyy="3.2207E-08"
+        iyz="6.3051E-10"
+        izz="2.3258E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.85 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/word_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/word_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="word_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="word_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="stopsignbg_Link">
+    <inertial>
+      <origin
+        xyz="0.1126 -0.60521 0.144"
+        rpy="0 0 0" />
+      <mass
+        value="0.023562" />
+      <inertia
+        ixx="2.9452E-05"
+        ixy="1.939E-21"
+        ixz="-1.2214E-37"
+        iyy="1.4744E-05"
+        iyz="-1.8808E-37"
+        izz="1.4744E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.85 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/stopsignbg_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/stopsignbg_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="stopsignbg_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="stopsignbg_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="startsignbg_Link">
+    <inertial>
+      <origin
+        xyz="1.1126 -0.60521 0.144"
+        rpy="0 0 0" />
+      <mass
+        value="0.023562" />
+      <inertia
+        ixx="2.9452E-05"
+        ixy="5.1771E-21"
+        ixz="8.0674E-23"
+        iyy="1.4744E-05"
+        iyz="3.7058E-22"
+        izz="1.4744E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0.85 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/startsignbg_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/startsignbg_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="startsign_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="startsignbg_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge1_Link">
+    <inertial>
+      <origin
+        xyz="-1.7447 2.4824 0.49802"
+        rpy="0 0 0" />
+      <mass
+        value="10.836" />
+      <inertia
+        ixx="2.3142"
+        ixy="-0.016111"
+        ixz="0.0062921"
+        iyy="3.7761"
+        iyz="-0.76615"
+        izz="5.0117" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge1_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge2_Link">
+    <inertial>
+      <origin
+        xyz="1.9586 -0.0038019 0.66512"
+        rpy="0 0 0" />
+      <mass
+        value="126.53" />
+      <inertia
+        ixx="31.959"
+        ixy="1.6676E-13"
+        ixz="-8.1191E-17"
+        iyy="14.996"
+        iyz="1.4543E-15"
+        izz="18.296" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge2_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3roof_Link">
+    <inertial>
+      <origin
+        xyz="-1.7355 0.056824 0.47054"
+        rpy="0 0 0" />
+      <mass
+        value="9.5841" />
+      <inertia
+        ixx="0.58147"
+        ixy="-0.3125"
+        ixz="-0.00053509"
+        iyy="1.9856"
+        iyz="-0.00014678"
+        izz="2.4583" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3roof_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3roof_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3roof_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3roof_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3bottom_Link">
+    <inertial>
+      <origin
+        xyz="-1.73532747324161 0.0572783623882027 0.224301970034508"
+        rpy="0 0 0" />
+      <mass
+        value="114.465" />
+      <inertia
+        ixx="4.64565115304739"
+        ixy="-3.32462563825795"
+        ixz="6.21708579222429E-16"
+        iyy="19.5801140390311"
+        iyz="2.40131903249755E-16"
+        izz="20.778290125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3bottom_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3bottom_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3bottom_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3bottom_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3support_Link">
+    <inertial>
+      <origin
+        xyz="-1.7826 0.27953 0.33143"
+        rpy="0 0 0" />
+      <mass
+        value="0.86429" />
+      <inertia
+        ixx="0.00043741"
+        ixy="-0.00098684"
+        ixz="1.3652E-18"
+        iyy="0.0048704"
+        iyz="3.4268E-19"
+        izz="0.005083" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3support_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3support_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3support_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3support_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3ws_Link">
+    <inertial>
+      <origin
+        xyz="-1.8029 0.37517 0.39935"
+        rpy="0 0 0" />
+      <mass
+        value="0.00225" />
+      <inertia
+        ixx="2.2218E-06"
+        ixy="-1.286E-06"
+        ixz="1.9125E-07"
+        iyy="7.9988E-06"
+        iyz="-8.9975E-07"
+        izz="8.9138E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3ws_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3ws_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3ws_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3ws_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3word_Link">
+    <inertial>
+      <origin
+        xyz="-1.8014 0.37502 0.3978"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023459" />
+      <inertia
+        ixx="1.0464E-07"
+        ixy="1.6507E-09"
+        ixz="1.0018E-08"
+        iyy="9.69E-08"
+        iyz="-4.7359E-08"
+        izz="1.3033E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3word_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3word_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3word_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3word_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3lion_Link">
+    <inertial>
+      <origin
+        xyz="-1.8493 0.56066 0.065609"
+        rpy="0 0 0" />
+      <mass
+        value="2.2402" />
+      <inertia
+        ixx="0.009151"
+        ixy="0.000367"
+        ixz="0.00034323"
+        iyy="0.0073633"
+        iyz="-0.0018205"
+        izz="0.0041214" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3lion_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3lion_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3lion_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3lion_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bridge3wbg_Link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3wbg_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://raceworld/meshes/bridge3wbg_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bridge3wbg_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="bridge3wbg_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

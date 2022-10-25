@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+	  <pose frame=''>0 0 0 0 0 0 </pose>
+    </include> 
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- <include>
+      <uri>model://track42</uri>
+    </include> -->
+
+    <model name='tagcode1'>
+	<static>1</static>
+	<link name='link'>
+		<visual name='visual'>
+		<cast_shadows>1</cast_shadows>
+		<geometry>
+		<box>
+		<size> 0.09 0.09 0.001</size>
+		</box>
+		</geometry>
+		<material>
+		<script>
+			<uri>model://tagcode/materials/scripts</uri>
+			<uri>model://tagcode/materials/textures</uri>
+			<name>tagcode1</name>
+		</script>
+		</material>
+		</visual>
+		<self_collide>0</self_collide>
+		<kinematic>0</kinematic>
+	</link>
+	<pose frame=''>1.849850 1.183890 0.011 0 0 0 </pose>
+    </model>
+
+    <model name='tagcode2'>
+	<static>1</static>
+	<link name='link'>
+		<visual name='visual'>
+		<cast_shadows>1</cast_shadows>
+		<geometry>
+		<box>
+		<size> 0.09 0.09 0.001</size>
+		</box>
+		</geometry>
+		<material>
+		<script>
+			<uri>model://tagcode/materials/scripts</uri>
+			<uri>model://tagcode/materials/textures</uri>
+			<name>tagcode2</name>
+		</script>
+		</material>
+		</visual>
+		<self_collide>0</self_collide>
+		<kinematic>0</kinematic>
+	</link>
+	<pose frame=''>0.175663 1.831060 0.011 0 0 0.7 </pose>
+    </model>
+
+
+    <model name='tagcode3'>
+	<static>1</static>
+	<link name='link'>
+		<visual name='visual'>
+		<cast_shadows>1</cast_shadows>
+		<geometry>
+		<box>
+		<size> 0.09 0.09 0.001</size>
+		</box>
+		</geometry>
+		<material>
+		<script>
+			<uri>model://tagcode/materials/scripts</uri>
+			<uri>model://tagcode/materials/textures</uri>
+			<name>tagcode3</name>
+		</script>
+		</material>
+		</visual>
+		<self_collide>0</self_collide>
+		<kinematic>0</kinematic>
+	</link>
+	<pose frame=''>-3.001410 1.328020 0.011 0 0 0.21 </pose>
+    </model>
+
+
+    <model name='tagcode4'>
+	<static>1</static>
+	<link name='link'>
+		<visual name='visual'>
+		<cast_shadows>1</cast_shadows>
+		<geometry>
+		<box>
+		<size> 0.09 0.09 0.001</size>
+		</box>
+		</geometry>
+		<material>
+		<script>
+			<uri>model://tagcode/materials/scripts</uri>
+			<uri>model://tagcode/materials/textures</uri>
+			<name>tagcode4</name>
+		</script>
+		</material>
+		</visual>
+		<self_collide>0</self_collide>
+		<kinematic>0</kinematic>
+	</link>
+	<pose frame=''>-1.27786 -1.201190 0.011 0 0 0 </pose>
+    </model>
+
+
+
+
+
+    
+  </world>
+</sdf>
+

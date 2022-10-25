@@ -1,0 +1,2 @@
+raceworld
+-DCATKIN_DEVEL_PREFIX=/home/bughht/deepracer/Electro_RaceCar/deepracer_single/devel -DCMAKE_INSTALL_PREFIX=/home/bughht/deepracer/Electro_RaceCar/deepracer_single/install -G Unix Makefiles
