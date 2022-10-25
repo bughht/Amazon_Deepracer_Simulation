@@ -4,13 +4,15 @@
 
 Opensource code for National Undergraduate Electronic Design Contest, Amazon Deepracer Track, Simulation Tasks.
 
-Task:
+Tasks:
 
 - Simulation environment construction
 - Drive Deepracer car in the simulation environment
 - QR code detection and lane change
 - Stop sign detection and break the car
 - Multi car following
+
+*! Warning: the simulation result may vary among different systems. We sacrificed robustness for higher speed performance in the contest. You may need to modify speed and PID params base on your requirements. Thanks! :)*
 
 ## Requirements
 
